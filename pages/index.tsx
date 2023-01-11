@@ -24,7 +24,7 @@ const Home = ({ categories, products }: Props) => {
   return (
     <div className="">
       <Head>
-        <title>Create Next App</title>
+        <title>Apple Store</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -32,12 +32,12 @@ const Home = ({ categories, products }: Props) => {
 
       <Basket />
 
-      <main className='relative h-[-200vh] bg-[#E7ECEE]'>
+      <main className="relative h-[200vh] bg-[#E7ECEE]">
         <Landing />
       </main>
-      <section className="relative z-40  -mt-[100vh] min-h-screen bg-[#1B1B1B]">
+      <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#1B1B1B]">
         <div className="space-y-10 py-16">
-          <h1 className='text-center text-4xl font-medium tracking-wide text-white md:text-5xl'>
+          <h1 className="text-center text-4xl font-medium tracking-wide text-white md:text-5xl">
             New Promos
           </h1>
 
@@ -48,9 +48,10 @@ const Home = ({ categories, products }: Props) => {
                   key={category._id}
                   id={category._id}
                   className={({ selected }) =>
-                    `whitespace-nowrap rounded-t-lg py-3 px-5 text-sm font-light outline-none md:py-4 md:px-6 md:text-base ${selected
-                      ? "borderGradient bg-[#35383C] text-white"
-                      : "border-b-2 border-[#35383C] text-[#747474]"
+                    `whitespace-nowrap rounded-t-lg py-3 px-5 text-sm font-light outline-none md:py-4 md:px-6 md:text-base ${
+                      selected
+                        ? "borderGradient bg-[#35383C] text-white"
+                        : "border-b-2 border-[#35383C] text-[#747474]"
                     }`
                   }
                 >
@@ -68,8 +69,8 @@ const Home = ({ categories, products }: Props) => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
 export default Home
 
